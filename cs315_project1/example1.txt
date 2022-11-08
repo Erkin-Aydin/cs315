@@ -1,0 +1,43 @@
+begin_program
+
+
+
+void main() {
+	
+	//This expression is to check whether the republic is founded or not
+	bool republic = false;
+
+	int cout_stmt = foo1(republic);
+	cout(cout_stmt);
+	
+	int input1 = 9999;
+	int someint = foo2(input1, cin());
+	cout(input1 + someint);
+}
+
+//Founds republic and returns number of years required
+int foo1 (bool r) {
+	int yearsRequired = 0;
+	while(i < 1923){
+		i++;
+		yearsRequired = yearsRequired + 1;
+	}
+	r = true;
+	return yearsRequired;
+}
+
+int foo2 (int input1, int input2) {
+	int j;
+	for( int i = input1 / 6, j = input - 23; i <= j; i++, j-- ) {
+		if( i % 10 == 5) {
+			i *= 5;
+		}
+		else {
+			i += 4;
+		}
+	}
+
+	return j;
+}
+
+end_program

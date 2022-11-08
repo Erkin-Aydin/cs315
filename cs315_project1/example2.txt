@@ -1,0 +1,30 @@
+begin_program
+
+
+void main() {
+
+	int temp = readTemperature();
+	int humidity = readHumidity();
+	int airp = readAirPressure();
+	int airq = readAirQuality();
+	int light = readLight();
+	int sound = readSound();
+	int s7 = readS7();
+	int s8 = readS8();
+	int s9 = readS9();
+	int s10 = readS10();
+	int somename10somename = readS10();
+	int timePassed = readTimer();
+	SWITCH_1 = !SWITCH_1
+	SWITCH_2 = !SWITCH_2
+       	SWITCH_3 = !SWITCH_3
+       	SWITCH_4 = !SWITCH_4
+       	SWITCH_5 = !SWITCH_5
+      	SWITCH_6 = !SWITCH_6
+       	SWITCH_7 = !SWITCH_7
+       	SWITCH_8 = !SWITCH_8
+       	SWITCH_9 = !SWITCH_9
+       	SWITCH_10 = !SWITCH_10
+}
+
+end_program

@@ -1,0 +1,67 @@
+begin_program
+
+void main() 
+{
+	
+	//This expression is to check whether the republic is founded or not ;
+	bool republic = false;
+
+	int cout_stmt = foo1(republic);
+	cout(cout_stmt);
+	
+	int input1 = 9999;
+	int someint = foo2(input1, cin());
+	cout(input1 + someint);
+
+
+	int temp = readTemperature();
+	int humidity = readHumidity();
+	int airp = readAirPressure();
+	int airq = readAirQuality();
+	int light = readLight();
+	int sound = readSound();
+	int s7 = readS7();
+	int s8 = readS8();
+	int s9 = readS9();
+	int s10 = readS10();
+	int somename10somename = readS10();
+	int timePassed = readTimer();
+	SWITCH_1 = !SWITCH_1;
+	SWITCH_2 = !SWITCH_2;
+       	SWITCH_3 = !SWITCH_3;
+       	SWITCH_4 = !SWITCH_4;
+       	SWITCH_5 = !SWITCH_5;
+      	SWITCH_6 = !SWITCH_6;
+       	SWITCH_7 = !SWITCH_7;
+       	SWITCH_8 = !SWITCH_8;
+       	SWITCH_9 = !SWITCH_9;
+       	SWITCH_10 = !SWITCH_10;
+	connectURL(https://www.geeksforgeeks.org/components-of-a-url/);
+}
+
+//Founds republic and returns number of years required
+int foo1 (bool r) {
+	int yearsRequired = 0;
+	while(i < 1923){
+		i++;
+		yearsRequired = yearsRequired + 1;
+	};
+	r = true;
+	return yearsRequired;
+}
+
+int foo2 (int input1, int input2) {
+	int j;
+	for( int i = input1 / 6, j = input - 23; i <= j; i++, j-- ) {
+		if( i % 10 == 5) {
+			i *= 5;
+		}
+		else {
+			i += 4;
+		};
+	};
+
+	return j;
+}
+
+end_program

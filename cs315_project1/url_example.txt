@@ -1,0 +1,7 @@
+begin_program
+
+void main() {
+	connectURL(https://www.geeksforgeeks.org/components-of-a-url/)	
+}
+
+end_program
