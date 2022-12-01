@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+	<head>
+	
+	
+	</head>
+	
+	<body>
+	
+	
+	</body>
+	
+	<script>
+	
+	//1
+//initializing
+let associativeArray = { "Name1": "val1", "Name2": "val2", "Name3": "val3","Name4": "val4" };
+
+//printing  each value one by one
+let key1 = "Name1";
+let key2 = "Name2";
+let key3 = "Name3";
+let key4 = "Name4";
+console.log("Values for a given key:")
+console.log(associativeArray[key1]);
+console.log(associativeArray[key2]);
+console.log(associativeArray[key3]);
+console.log(associativeArray[key4] + "\n");
+//2
+//adding a new element
+associativeArray["Name5"] = "val5";
+
+//printing new values
+console.log("New values for a given key:")
+let key5 = "Name5";
+console.log(associativeArray[key1]);
+console.log(associativeArray[key2]);
+console.log(associativeArray[key3]);
+console.log(associativeArray[key4]);
+console.log(associativeArray[key5] + "\n");
+
+//3
+//deleting
+delete associativeArray["Name5"];
+
+//4
+//printing after deletion of Name5
+console.log("Values after deletion of \"Name5\":")
+console.log(associativeArray[key1]);
+console.log(associativeArray[key2]);
+console.log(associativeArray[key3]);
+console.log(associativeArray[key4]);
+console.log(associativeArray[key5] + "\n");
+
+//5
+//modifying values of Name2 and Name3
+associativeArray["Name2"] = "VAL2";
+associativeArray["Name3"] = "VAL3";
+
+//printing values after modifying values of Name2 and Name3
+console.log("Values after modification of \"Name2\" and \"Name3\":");
+console.log(associativeArray[key1]);
+console.log(associativeArray[key2]);
+console.log(associativeArray[key3]);
+console.log(associativeArray[key4]);
+console.log(associativeArray[key5] + "\n");
+
+//6
+//looking for existence of existing keys
+console.log("Looking for existence of keys:");
+console.log("Looking for \"Name1\":" + (key1 in associativeArray));
+console.log("Looking for \"Name2\":" + (key2 in associativeArray));
+console.log("Looking for \"Name3\":" + (key3 in associativeArray));
+console.log("Looking for \"Name4\":" + (key4 in associativeArray));
+
+//looking for existence of non-existing keys
+console.log("Looking for \"NAME1\":" + ("NAME1" in associativeArray));
+console.log("Looking for \"name2\":" + ("name2" in associativeArray));
+console.log("Looking for \"NamE3\":" + ("NamE3" in associativeArray));
+console.log("Looking for \" \":" + ( " " in associativeArray) + "\n");
+
+//7
+let values = Object.values(associativeArray);
+console.log("Searching values:");
+console.log("Looking for \"val1\": " + (values.indexOf("val1") > -1));
+console.log("Looking for \"val2\": " + (values.indexOf("val2") > -1));
+console.log("Looking for \"VAL2\": " + (values.indexOf("VAL2") > -1));
+console.log("Looking for \"val3\": " + (values.indexOf("val3") > -1));
+console.log("Looking for \"VAL3\": " + (values.indexOf("VAL3") > -1));
+console.log("Looking for \"val4\": " + (values.indexOf("val4") > -1));
+console.log("Looking for \"val5\": " + (values.indexOf("val5") > -1) + "\n");
+
+//8
+
+//8
+for(key in associativeArray) {
+        foo(key, associativeArray[key]);
+}
+function foo(key, val) {
+        console.log(key + ", " + val);
+}
+
+	
+	</script>
+</html>
