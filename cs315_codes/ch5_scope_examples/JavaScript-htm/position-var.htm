@@ -1,0 +1,21 @@
+<script>
+
+x=5;
+
+function foo () {
+
+  alert("in foo, x="+x);
+
+  x = 7;
+  alert("in foo, x="+x);
+
+  var x; // local variable x is defined at the end of the function definition !
+         // Hoisting: all var declaration are executed as the first statements of their scope.
+         // and initialized to 'undefined'
+}
+
+foo();
+alert("in global x="+x);
+
+</script>
+

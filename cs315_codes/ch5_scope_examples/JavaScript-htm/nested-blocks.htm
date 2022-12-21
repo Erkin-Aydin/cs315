@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>JavaScript Example</TITLE>
+
+<script>
+b = 1;
+function outer(){
+  var a = 2;
+  alert("in outer, a="+a+" b="+b);
+  {
+     var c = 3;
+     alert("a="+a+" b="+b+" c="+c);
+     {
+//        var b= 4;  // try by commenting out
+        alert("a="+a+" b="+b+" c="+c);
+     }
+  }
+  alert("end of outer, a="+a+" b="+b+" c="+c);
+} // outer
+outer();
+
+</script>
+
+</HEAD>
+</HTML>

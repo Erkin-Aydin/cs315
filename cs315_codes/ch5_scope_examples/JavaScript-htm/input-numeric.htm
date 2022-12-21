@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+  <script>
+     function foo() {
+       var str=document.getElementById("text1").value;
+       const num = parseInt(str);
+       var result = num * 4 + 3;
+       document.getElementById("result").innerHTML = result;
+     }
+  </script>
+  <input id="text1" placeholder="Enter a number here: "><br>
+  <button id="bttn1" onclick="foo()">Click me</button>
+  <div id="result"></div>
+
+</body>
+</html>
