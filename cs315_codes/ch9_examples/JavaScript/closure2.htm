@@ -1,0 +1,22 @@
+<HTML>
+<BODY>
+<h3>Closure2</h3>
+<script> 
+
+  function outer (f, n) { 
+    var x = f;
+    function fooMaker(z) {
+      return function(y) {return x + y + z;}  // anonymous fuunction
+    }
+    return fooMaker(n);
+  }
+
+  var foo1 = outer(100,10);        // f=100, n=10
+  var foo2 = outer(200,20);        // f=200, n=20
+  outer = undefined;
+  document.write("foo1: " + foo1(3) + "<br />");  // x=100, y=3, z=10
+  document.write("foo2: " + foo2(5) + "<br />");  // x=200, y=5, z=20
+</script>
+
+</BODY>
+</HTML>

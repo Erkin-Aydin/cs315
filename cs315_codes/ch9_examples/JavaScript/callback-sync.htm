@@ -1,0 +1,15 @@
+
+<script>
+function greeting(name) {
+  alert('Hello ' + name);
+}
+
+function processUserInput(callback) {
+  var name = prompt('Please enter your name.');
+  callback(name);
+}
+
+processUserInput(greeting);
+</script>
+
+This was an example of a synchronous callback function.

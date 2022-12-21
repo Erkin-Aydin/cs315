@@ -1,0 +1,19 @@
+<HTML>
+<BODY>
+
+<script> 
+  document.write("<h1>Closure Example</h1>") 
+
+  function makeAdder(x) {
+     return function(y) {return x + y;}  // anonymous fuunction
+  }
+
+  var add10 = makeAdder(10);
+  var add5 = makeAdder(5);
+  document.write("add 10 to 20: " + add10(20) + "<br />");
+  document.write("add 5 to 20: " + add5(20) + "<br />");
+
+</script>
+
+</BODY>
+</HTML>

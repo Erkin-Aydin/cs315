@@ -1,0 +1,15 @@
+<script>
+function first() {
+   alert ("In first");
+}
+
+function second() {
+  alert("In second");
+}
+
+// setTimeout(), setInterval(), requestAnimationFrame() 
+// are asynchronously functions
+
+setTimeout(first, 100); // first is a callback function
+second();
+</script>

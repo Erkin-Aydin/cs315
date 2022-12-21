@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+window.onload = function() {
+  n=0;
+  document.querySelector("#callback-btn")
+          .addEventListener("click", 
+                            function() {  // anonymous callback function
+                              n++;
+                              console.log("User has clicked the button "+n+" times");
+                            }
+                           );
+}
+</script>
+</head>
+<body>
+Event listener with an anonymous callback function:<br>
+<button id='callback-btn'>Click here</button>
+<P>Press F12 to see the messages sent to the console.
+</body>
+</html>

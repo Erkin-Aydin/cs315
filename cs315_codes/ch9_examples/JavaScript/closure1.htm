@@ -1,0 +1,20 @@
+<HTML>
+<BODY>
+<h3>Closure1</h3>
+<script> 
+
+  function fooMaker(z) {
+    return function(y) {return x + y + z;}  // anonymous fuunction
+  }
+  
+  x = 100;  // x is a global variable
+  var foo1 = fooMaker(10);
+  x = 200;
+  var foo2 = fooMaker(20);
+  fooMaker = undefined;
+  document.write("foo1: " + foo1(7) + "<br />");  // x=200, y=7, z=10
+  document.write("foo2: " + foo2(8) + "<br />");  // x=200, y=8, z=20
+</script>
+
+</BODY>
+</HTML>
