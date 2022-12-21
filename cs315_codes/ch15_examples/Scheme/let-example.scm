@@ -1,0 +1,6 @@
+(let ((a 3) (b 4)) 
+     (display a)(display "\n")
+     (display b)(display "\n")
+     (let ((double (* 2 a)) (triple (* 3 b))) 
+          (display (+ double triple))
+	  (newline)))

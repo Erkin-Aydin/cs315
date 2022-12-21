@@ -1,0 +1,10 @@
+(define (equal list1 list2)
+   (cond
+     ((not (list? list1))(eq? list1 list2))
+     ((not (list? list2)) #F)
+     ((null? list1) (null? list2))  ; list1 and list2 are ()
+     ((null? list2) #F)
+     ((equal (car list1) (car list2))
+      (equal (cdr list1) (cdr list2)))
+     (else #F)
+))

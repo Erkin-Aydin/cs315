@@ -1,0 +1,72 @@
+Tracing in Scheme:
+
+It is possible to trace the sequence of function calls in most Functional Programmimg environments.
+
+The trace of all calls to a function, say foo, can be traced by executing the following call:
+> (trace foo)    ; Here > is the prompt
+
+Example:
+> (define (fact n) (if (< n 2) 1 (* n (fact (- n 1)))))
+> (trace fact)
+> (fact 5)
+| > (fact 5)
+| | > (fact 4)
+| | | > (fact 3)
+| | | | > (fact 2)
+| | | | | > (fact 1)
+| | | | | 1
+| | | | 2
+| | | 6
+| | 24
+| 120
+120
+We can see how the run-time stack grows.
+
+A tail recursive implementation of the factorial function is given below:
+> (define (factorial n) (facthelper n 1))
+> (define (facthelper n factpartial) (if (<= n 0) factpartial (facthelper (- n 1) (* n factpartial))))
+> (trace factorial)
+> (trace facthelper)
+> (factorial 5)
+| > (factorial 5)
+| > (facthelper 5 1)
+| > (facthelper 4 5)
+| > (facthelper 3 20)
+| > (facthelper 2 60)
+| > (facthelper 1 120)
+| > (facthelper 0 120)
+| 120
+120
+
+Mutual Tail-Recursion:
+Mutual recursion is a form of recursion where two mathematical or computational objects, 
+such as functions or data types, are defined in terms of each other.
+Following two functions are mutually recursive:
+
+(define (isEven n)
+  (cond ((> n 0) (isOdd (- n 1)))
+        (else #t)))
+
+(define (isOdd n)
+  (cond ((> n 0) (isEven (- n 1)))
+        (else #f)))
+
+Example call:
+> (trace isOdd isEven)
+> (isEven 10)
+> (isEven 8)
+| > (isEven 8)
+| > (isOdd 7)
+| > (isEven 6)
+| > (isOdd 5)
+| > (isEven 4)
+| > (isOdd 3)
+| > (isEven 2)
+| > (isOdd 1)
+| > (isEven 0)
+| #t
+#t
+
+Each of these two functions returns the result of a mutually recursive call,
+directly without any further computation.
+Therefore they are "mutually tail-recursive".
