@@ -1,0 +1,9 @@
+types: y.tab.c lex.yy.c
+	gcc -o types y.tab.c
+y.tab.c: types.y lex.yy.c
+	yacc types.y
+lex.yy.c: types.l
+	lex types.l
+clean:
+	rm -f lex.yy.c y.tab.c types
+

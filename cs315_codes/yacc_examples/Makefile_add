@@ -1,0 +1,9 @@
+add: y.tab.c lex.yy.c
+	gcc -o add y.tab.c
+y.tab.c: add.y lex.yy.c
+	yacc add.y
+lex.yy.c: add.l
+	lex add.l
+clean:
+	rm -f lex.yy.c y.tab.c add
+

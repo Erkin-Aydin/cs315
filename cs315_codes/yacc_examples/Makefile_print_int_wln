@@ -1,0 +1,10 @@
+print-int-wln: y.tab.c lex.yy.c
+	gcc -o print-int-wln y.tab.c
+y.tab.c: print-int-wln.y lex.yy.c
+	yacc print-int-wln.y
+lex.yy.c: print-int-wln.l
+	lex print-int-wln.l
+clean:
+	rm -f lex.yy.c y.tab.c print-int-wln
+
+
